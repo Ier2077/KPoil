@@ -86,7 +86,11 @@ export default function Navbar() {
               Products
             </Link>
             </li>
-            <li className="hover:text-peakblue transition-colors cursor-pointer">About</li>
+
+            <li className="hover:text-peakblue transition-colors cursor-pointer">
+              <Link href="/about" className="hover:text-peakblue transition-colors">
+              About</Link>
+              </li>
           </ul>
 
           <button
