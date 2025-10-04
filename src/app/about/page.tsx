@@ -7,9 +7,9 @@ import Image from 'next/image';
 
 // --- Add your company images here ---
 const companyImages = [
-    { src: 'https://via.placeholder.com/800x500?text=Our+Modern+Factory', alt: 'Our Factory' },
-    { src: 'https://via.placeholder.com/800x500?text=The+KPoil+Team', alt: 'The Team' },
-    { src: 'https://via.placeholder.com/800x500?text=Research+&+Development', alt: 'Research and Development' },
+    { src: '/BC5A11900.jpg', alt: 'Our Factory' },
+    { src: '/BC5A10833.jpg', alt: 'The Team' },
+    { src: '/BC5A10699.jpg', alt: 'Research and Development' },
 ];
 // ------------------------------------
 
