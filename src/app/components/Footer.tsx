@@ -18,12 +18,16 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact Button */}
+        {/* Call Us Button */}
         <div className="w-full md:w-auto flex justify-center md:justify-end mt-4 md:mt-0">
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-[#13182b] font-bold px-8 py-2 rounded-xl transition-all shadow-md">
-            Contact Us
-          </button>
+          <a
+            href="tel:+233500010666"
+            className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-2 rounded-xl transition-all shadow-md"
+          >
+            Call Us
+          </a>
         </div>
+
       </div>
     </footer>
   );
