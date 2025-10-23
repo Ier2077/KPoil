@@ -42,7 +42,7 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl font-bold mb-4 text-yellow-400"
         >
-          Powering Performance. Protecting Engines.
+          Heritage in Name. Innovation in Tech.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
