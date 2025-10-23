@@ -115,7 +115,7 @@ export default function Home() {
             </div>
             <div className="flex gap-3">
               <a href="https://wa.me/+233500010666" className="rounded-xl bg-green-500 px-4 py-2 text-white font-medium hover:opacity-90 transition">WhatsApp Us</a>
-              <a href="tel : +233245643503" className="rounded-xl border border-white/20 px-4 py-2 text-white font-medium hover:border-peakyellow/50 transition">Contact Sales</a>
+              <a href="tel:+233500010666" className="rounded-xl border border-white/20 px-4 py-2 text-white font-medium hover:border-peakyellow/50 transition">Contact Sales</a>
             </div>
           </div>
         </section>
