@@ -9,8 +9,8 @@ export default function Home() {
   // --- Slideshow State and Data ---
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const slideshowImages = [
-    { src: '/slideshow/BC5A10699.jpg', alt: 'High-performance engine oil' },
-    { src: '/slideshow/BC5A10833.jpg', alt: 'Industrial lubrication solutions' },
+    { src: '/slideshow/3M4A94933.jpg', alt: 'High-performance engine oil' },
+    { src: '/slideshow/3M4A95844.jpg', alt: 'Industrial lubrication solutions' },
     { src: '/slideshow/BC5A11900.jpg', alt: 'Close-up of a modern engine' },
   ];
 

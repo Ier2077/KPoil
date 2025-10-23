@@ -3,11 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Phone } from 'lucide-react';
 
 const companyImages = [
   { src: '/BC5A11900.jpg', alt: 'Our Factory' },
   { src: '/BC5A10833.jpg', alt: 'The Team' },
   { src: '/BC5A10699.jpg', alt: 'Research and Development' },
+  { src: '/slideshow/3M4A94766.jpg', alt: 'Research and Development' },
+  { src: '/slideshow/3M4A94944.jpg', alt: 'Research and Development' },
+
 ];
 
 export default function AboutPage() {
@@ -173,12 +177,13 @@ export default function AboutPage() {
           Have a question or need product recommendations? Our experts are ready
           to help.
         </p>
-        <a
-          href="/contact"
-          className="bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
-        >
-          Contact Us
-        </a>
+<a
+  href="tel:+233245643503"
+  className="inline-flex items-center gap-2 bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition w-fit"
+>
+  <Phone size={20} /> Contact Us
+</a>
+
       </section>
     </main>
   );

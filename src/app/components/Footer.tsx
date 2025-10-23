@@ -12,8 +12,8 @@ export default function Footer() {
           
           {/* Address & Contact */}
           <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8 text-white/90 text-sm md:text-base">
-            <span>Address: 2364 Lubricant Ln</span>
-            <span>Phone: (123) 456-7880</span>
+            <span>Address: Plot No8, Spintex, Accra</span>
+            <span>Phone: +233245643503</span>
             <span>Email: info@peaklube.com</span>
           </div>
         </div>
