@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Phone } from 'lucide-react';
@@ -11,7 +11,6 @@ const companyImages = [
   { src: '/BC5A10699.jpg', alt: 'Research and Development' },
   { src: '/slideshow/3M4A94766.jpg', alt: 'Research and Development' },
   { src: '/slideshow/3M4A94944.jpg', alt: 'Research and Development' },
-
 ];
 
 export default function AboutPage() {
@@ -22,15 +21,18 @@ export default function AboutPage() {
     setCurrentIndex(isFirstSlide ? companyImages.length - 1 : currentIndex - 1);
   };
 
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === companyImages.length - 1;
-    setCurrentIndex(isLastSlide ? 0 : currentIndex + 1);
-  };
+  // Fix 1: Wrap nextSlide in useCallback to stabilize it for the useEffect
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === companyImages.length - 1 ? 0 : prevIndex + 1
+    );
+  }, []);
 
+  // Fix 2: Add nextSlide to dependencies
   useEffect(() => {
     const timer = setTimeout(nextSlide, 5000);
     return () => clearTimeout(timer);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 text-white">
@@ -69,7 +71,8 @@ export default function AboutPage() {
             Engineered with the most advanced additive packages and high-performance polymers sourced from leading global technology providers, KP Motor Oil incorporates cutting-edge chemistry that meets and exceeds the latest API, ACEA, and OEM specifications.
           </p>
           <p>
-            By closely following in the footsteps of the world's most renowned lubricant manufacturers, KP ensures every product reflects rigorous R&D, superior viscosity stability, outstanding oxidation resistance, and enhanced fuel economy.
+            {/* Fix 3: Escaped apostrophe in "world's" */}
+            By closely following in the footsteps of the world&apos;s most renowned lubricant manufacturers, KP ensures every product reflects rigorous R&D, superior viscosity stability, outstanding oxidation resistance, and enhanced fuel economy.
           </p>
           <div className="pt-4">
             <h3 className="text-xl font-semibold text-yellow-400 mb-3">The KP portfolio comprehensively covers:</h3>
@@ -80,7 +83,7 @@ export default function AboutPage() {
             </ul>
           </div>
           <p className="pt-4 text-center italic text-yellow-200">
-            With its guiding principle — <strong>Heritage in Name, Innovation in Tech</strong> — KP Motor Oil stands as the trusted choice for discerning customers across the Middle East and beyond who demand proven legacy performance combined with tomorrow's technology today.
+            With its guiding principle — <strong>Heritage in Name, Innovation in Tech</strong> — KP Motor Oil stands as the trusted choice for discerning customers across the Middle East and beyond who demand proven legacy performance combined with tomorrow&apos;s technology today.
           </p>
           <p className="text-center font-bold text-yellow-400 text-xl pt-2">
             KP Motor Oil. Timeless Quality. Future-Ready Performance.
@@ -175,10 +178,11 @@ export default function AboutPage() {
           Our Journey
         </h2>
         <p className="max-w-4xl mx-auto text-gray-300">
+          {/* Fix 4: Escaped apostrophe in "what's" */}
           Since our founding, KPoil has grown from a small startup into a global
           player in lubrication solutions. With presence across multiple
           countries, a strong R&D foundation, and world-class partnerships, we
-          continue to push the limits of what’s possible in performance and
+          continue to push the limits of what&apos;s possible in performance and
           protection.
         </p>
       </section>
