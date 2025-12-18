@@ -57,18 +57,35 @@ export default function AboutPage() {
       </section>
 
       {/* Company Story */}
-      <section className="max-w-5xl mx-auto px-6 py-10 text-center">
-        <h2 className="text-3xl font-semibold mb-4 text-yellow-300">
-          About Our Company
+      <section className="max-w-5xl mx-auto px-6 py-10">
+        <h2 className="text-3xl font-semibold mb-6 text-yellow-300 text-center">
+          KP Motor Oil – Heritage in Name, Innovation in Tech
         </h2>
-        <p className="text-gray-300 leading-relaxed">
-          KPoil was founded with a single mission: to engineer the most advanced
-          engine oils for those who demand peak performance. From our
-          state-of-the-art laboratories to the race track, we are dedicated to
-          pushing the boundaries of lubrication technology. Our products are
-          trusted by professional racing teams, industrial leaders, and everyday
-          drivers who want to protect their investment and enhance their drive.
-        </p>
+        <div className="text-gray-300 leading-relaxed space-y-4 text-left">
+          <p>
+            KP Motor Oil is a distinguished premium lubricant brand rooted in the heart of the Middle East, proudly blending decades of regional expertise with state-of-the-art global innovation. Drawing from the finest Group II+ and Group III base oils produced in the region—recognized worldwide for their exceptional purity, stability, and performance—KP formulations deliver unparalleled engine protection and efficiency.
+          </p>
+          <p>
+            Engineered with the most advanced additive packages and high-performance polymers sourced from leading global technology providers, KP Motor Oil incorporates cutting-edge chemistry that meets and exceeds the latest API, ACEA, and OEM specifications.
+          </p>
+          <p>
+            By closely following in the footsteps of the world's most renowned lubricant manufacturers, KP ensures every product reflects rigorous R&D, superior viscosity stability, outstanding oxidation resistance, and enhanced fuel economy.
+          </p>
+          <div className="pt-4">
+            <h3 className="text-xl font-semibold text-yellow-400 mb-3">The KP portfolio comprehensively covers:</h3>
+            <ul className="list-disc list-inside space-y-2 pl-4">
+              <li>Fully synthetic, semi-synthetic, and mineral gasoline engine oils for passenger cars and high-performance vehicles</li>
+              <li>Heavy-duty diesel engine oils designed for commercial fleets, construction, and agricultural machinery</li>
+              <li>A complete range of industrial lubricants, including hydraulic fluids, gear oils, turbine oils, and specialty greases</li>
+            </ul>
+          </div>
+          <p className="pt-4 text-center italic text-yellow-200">
+            With its guiding principle — <strong>Heritage in Name, Innovation in Tech</strong> — KP Motor Oil stands as the trusted choice for discerning customers across the Middle East and beyond who demand proven legacy performance combined with tomorrow's technology today.
+          </p>
+          <p className="text-center font-bold text-yellow-400 text-xl pt-2">
+            KP Motor Oil. Timeless Quality. Future-Ready Performance.
+          </p>
+        </div>
       </section>
 
       {/* Slideshow */}
@@ -76,9 +93,8 @@ export default function AboutPage() {
         {companyImages.map((image, index) => (
           <div
             key={index}
-            className={`transition-opacity duration-700 ${
-              currentIndex === index ? 'opacity-100' : 'opacity-0 absolute inset-0'
-            }`}
+            className={`transition-opacity duration-700 ${currentIndex === index ? 'opacity-100' : 'opacity-0 absolute inset-0'
+              }`}
           >
             <Image
               src={image.src}
@@ -111,9 +127,8 @@ export default function AboutPage() {
           <span
             key={i}
             onClick={() => setCurrentIndex(i)}
-            className={`h-3 w-3 rounded-full cursor-pointer ${
-              currentIndex === i ? 'bg-yellow-400' : 'bg-gray-500'
-            }`}
+            className={`h-3 w-3 rounded-full cursor-pointer ${currentIndex === i ? 'bg-yellow-400' : 'bg-gray-500'
+              }`}
           ></span>
         ))}
       </div>
@@ -177,12 +192,12 @@ export default function AboutPage() {
           Have a question or need product recommendations? Our experts are ready
           to help.
         </p>
-<a
-  href="tel:+233245643503"
-  className="inline-flex items-center gap-2 bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition w-fit"
->
-  <Phone size={20} /> Contact Us
-</a>
+        <a
+          href="tel:+233245643503"
+          className="inline-flex items-center gap-2 bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition w-fit"
+        >
+          <Phone size={20} /> Contact Us
+        </a>
 
       </section>
     </main>

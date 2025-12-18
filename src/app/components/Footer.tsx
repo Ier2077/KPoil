@@ -8,12 +8,29 @@ export default function Footer() {
         </div>
 
         {/* Links & Info */}
-        <div className="w-full md:flex-1 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          
-          {/* Address & Contact */}
-          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8 text-white/90 text-sm md:text-base">
-            <span>Address: Plot No8, Spintex, Accra</span>
-            <span>Phone: +233245643503</span>
+        <div className="w-full md:flex-1 flex flex-col gap-6">
+
+          {/* Contact Information */}
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
+
+            {/* Ghana Office */}
+            <div className="flex flex-col gap-1 text-white/90 text-sm md:text-base">
+              <span className="font-semibold text-yellow-400">Ghana Office</span>
+              <span>Address: Plot No8, Spintex, Accra</span>
+              <span>Phone: +233245643503</span>
+            </div>
+
+            {/* Turkey Office */}
+            <div className="flex flex-col gap-1 text-white/90 text-sm md:text-base">
+              <span className="font-semibold text-yellow-400">Turkey Office</span>
+              <span>Address: Fatih Mahallesi Çamlık Cadde No:2</span>
+              <span className="pl-16">İç Kapı No:18 Gaziemir İzmir TÜRKİYE</span>
+              <span>Phone: +90 546 885 7563</span>
+            </div>
+          </div>
+
+          {/* Email */}
+          <div className="text-white/90 text-sm md:text-base">
             <span>Email: info@peaklube.com</span>
           </div>
         </div>
